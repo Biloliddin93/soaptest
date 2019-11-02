@@ -1,7 +1,6 @@
 from suds.client import Client
-url = ' https://ips.gov.uz:443/mediate/ips/STC/GetTinbyPasNum?wsdl'
+url = 'https://ips.gov.uz:443/mediate/ips/STC/GetTinbyPasNum?wsdl'
 client = Client(url)
+print (client)
 
-client.set_options(service='GetTinbyPasNumService', port='GetTinbyPasNumSOAP12BindingPort')
-rest = client.service.rEQ(pasSer='AA', pasNum='2550708', lang='uz')
-print (rest)
+
