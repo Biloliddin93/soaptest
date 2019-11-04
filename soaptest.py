@@ -1,5 +1,5 @@
 import requests
-import xml.etree.ElementTree as ET
+
 
 url="https://ips.gov.uz:443/mediate/ips/STC/GetTinbyPasNum"
 headers = {'content-type': 'application/soap+xml'}
@@ -16,7 +16,7 @@ body = """<x:Envelope xmlns:x="http://schemas.xmlsoap.org/soap/envelope/" xmlns:
             <get:message>
                 <get:lang>1</get:lang>
                 <get:pasSer>AA</get:pasSer>
-                <get:pasNum>2550708</get:pasNum>
+                <get:pasNum>0347012</get:pasNum>
             </get:message>
         </get:gettin>
     </x:Body>
@@ -25,7 +25,7 @@ body = """<x:Envelope xmlns:x="http://schemas.xmlsoap.org/soap/envelope/" xmlns:
 response = requests.post(url,data=body,headers=headers)
 
 resx = str(response.content)
-mysp = resx.split('<tin>')
-mytin = mysp[1].split('</tin>')
-#mytin[0]
-print (mytin[0])
+mysp = resx.split('<tin>')[1].split('</tin>')[0]
+
+
+print (mysp)

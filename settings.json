@@ -1,0 +1,6 @@
+{
+  "UserName":"Biloliddinnapm",
+  "Password":"1234567890",
+  "URL":"pmi.gov.uz",
+  "APIURL":"https://pmi.gov.uz/api/v3/trackor_types/VEDOMSTVO/trackors?fields=VED_INN%2CVED_CHECK_INN&VED_CHECK_INN=1",
+}

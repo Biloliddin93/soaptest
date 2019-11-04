@@ -40,7 +40,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.soaptest">
+  <component name="RunManager" selected="Python.vedoms">
     <configuration name="getcompany" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="soaptest" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,10 +107,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="vedoms" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="soaptest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vedoms.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.soaptest" />
+        <item itemvalue="Python.vedoms" />
         <item itemvalue="Python.getcompany" />
+        <item itemvalue="Python.soaptest" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +167,7 @@
       <workItem from="1572846431801" duration="687000" />
       <workItem from="1572847278599" duration="192000" />
       <workItem from="1572848526273" duration="2740000" />
-      <workItem from="1572852209466" duration="5552000" />
+      <workItem from="1572852209466" duration="20814000" />
     </task>
     <servers />
   </component>
@@ -179,7 +202,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/soaptest$soaptest.coverage" NAME="soaptest Coverage Results" MODIFIED="1572860532323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/soaptest$getcompany.coverage" NAME="getcompany Coverage Results" MODIFIED="1572859216753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/soaptest$soaptest.coverage" NAME="soaptest Coverage Results" MODIFIED="1572865332881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/soaptest$getcompany.coverage" NAME="getcompany Coverage Results" MODIFIED="1572876761067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/soaptest$vedoms.coverage" NAME="vedoms Coverage Results" MODIFIED="1572878443167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

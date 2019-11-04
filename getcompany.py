@@ -1,24 +1,36 @@
 import requests
-url="https://ips.gov.uz:443/mediate/ips/STC/GetTinbyPasNum"
+import xmltodict
+import onevizion
+import json
+
+
+
+INN = 305875205
+url="https://ips.gov.uz:443/mediate/ips/ILDS/GetFullLegalEntityInfoLE"
 headers = {'content-type': 'application/soap+xml'}
 #headers = {'content-type': 'text/xml'}
-body = """<x:Envelope xmlns:x="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="urn:megaware:/mediate/ips/STC/GetTinbyPasNum/GetTinbyPasNum.wsdl">
+body = """<x:Envelope xmlns:x="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="urn:megaware:/mediate/ips/ILDS/GetFullLegalEntityInfoLE/GetFullLegalEntityInfoLE.wsdl">
     <x:Header/>
     <x:Body>
-        <get:gettin>
+        <get:GetFullLegalEntityInfo>
             <get:AuthInfo>
                 <get:userSessionId></get:userSessionId>
                 <get:WS_ID></get:WS_ID>
                 <get:LE_ID></get:LE_ID>
             </get:AuthInfo>
-            <get:message>
-                <get:lang>1</get:lang>
-                <get:pasSer>AA</get:pasSer>
-                <get:pasNum>2550708</get:pasNum>
-            </get:message>
-        </get:gettin>
+            <get:msg>
+                <get:_LHASH_KEY_>E001|oDlpS4ZiwZEd5giUkMSxKXBIb9bOafcOJOBXRnzuVyepiReYCylXFRL4qz9gV</get:_LHASH_KEY_>
+                <get:TIN>"""+str(INN)+"""</get:TIN>
+            </get:msg>
+        </get:GetFullLegalEntityInfo>
     </x:Body>
 </x:Envelope>"""
 
+
 response = requests.post(url,data=body,headers=headers)
-print (response.content)
+
+
+my_dict = xmltodict.parse(response.content)
+myvars = my_dict['env:Envelope']['env:Body']['n1:LEGAL_ENTITY_INFORMATION']
+
+print(myvars['TIN'][1])
