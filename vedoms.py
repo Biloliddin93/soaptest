@@ -13,7 +13,7 @@ APIURL = 'https://pmi.gov.uz/api/v3/trackor_types/VEDOMSTVO/trackors?fields=VED_
 
 
 
-r=requests.get(APIURL, auth=(login, password))
+r=requests.get(APIURL, auth=(login, password),verify=False)
 response = r.json()
 for data in response:
  INN = data['VED_INN']
@@ -37,7 +37,7 @@ for data in response:
      </x:Body>
  </x:Envelope>"""
 
- response = requests.post(urlx, data=body, headers=headers)
+ response = requests.post(urlx, data=body, headers=headers,verify=False)
 
  my_dict = xmltodict.parse(response.content)
  myvars = my_dict['env:Envelope']['env:Body']['n1:LEGAL_ENTITY_INFORMATION']
